@@ -1,0 +1,67 @@
+@import "~normalize.css";
+@import "./const";
+
+html, :root {
+    height: 100%;
+}
+
+:root {
+  box-sizing: border-box;
+  color: $font_color;
+  cursor: default;
+  font-family: -apple-system, Roboto, PingFang SC, Noto Sans CJK SC, sans-serif;
+}
+
+*, :after, :before {
+    box-sizing: inherit;
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+a:active,
+i:active,
+.btn:active {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    margin: 0;
+    font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a {
+    cursor: pointer;
+}
+
+em {
+    font-style: normal;
+}
+
+/*取消表单项聚焦时产生的黄色、蓝色边框*/
+input, button, select, textarea {
+  outline: none;
+}
+
+// fix Font Boosting
+p, div {
+    max-height: 999999px; /*no*/
+}
+
+[v-cloak] {
+  display: none;
+}

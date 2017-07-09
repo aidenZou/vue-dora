@@ -1,15 +1,21 @@
 <template>
-  <div id="app" class="full-page">
-    <Demo></Demo>
-    <PopupDemo :show.sync="show" :list="list"></PopupDemo>
-    <button @click="show=true">点击</button>
-
+  <v-page class="div-class" :view="PAGE_VIEW">
+    <v-demo></v-demo>
+    <button @click="show=true">点击展示用 popup包装过的组件</button>
     <!--布局-->
-    <Layout></Layout>
-  </div>
+    <v-layout></v-layout>
+
+    <!--slot-->
+    <div slot="nothing">自定义无数据内容</div>
+
+    <template slot="fixed">
+      <v-popupdemo :show.sync="show" :list="list"></v-popupdemo>
+    </template>
+  </v-page>
 </template>
 
 <script>
+  import pageComponent from '@/components/page'
   import Layout from './components/Layout'
   import Demo from './components/Demo'
   import PopupDemo from './components/PopupDemo'
@@ -17,13 +23,15 @@
   export default {
     name: 'app',
     components: {
-      Layout,
-      Demo,
-      PopupDemo
+      'v-page': pageComponent,
+      'v-layout': Layout,
+      'v-demo': Demo,
+      'v-popupdemo': PopupDemo
     },
     data () {
       return {
-        show: true,
+        PAGE_VIEW: 'MAIN',      // MAIN、LOADING、NOTHING
+        show: false,
         list: [1, 2, 3, 4, 5]
       }
     }
@@ -32,19 +40,4 @@
 
 <style lang="scss">
   @import '~@/styles/index';
-
-  #app {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  body {
-    height: 100%;
-  }
-
-  .full-page {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
 </style>

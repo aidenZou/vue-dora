@@ -5,7 +5,7 @@
     <div>
       我是一个组件
       <p>{{ list }}</p>
-      <button @click="clickHandler">点击</button>
+      <!--<button @click="clickHandler">点击</button>-->
     </div>
   </div>
 </template>

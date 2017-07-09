@@ -1,7 +1,6 @@
-import Popup from '@/components/popup'
+/* eslint-disable no-unused-vars */
+import Popup from '@/containers/popup'
 import Demo from './Demo'
-
-console.log(Popup, Demo)
 
 export default {
   functional: true,

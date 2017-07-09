@@ -2,6 +2,30 @@
 
 > vue 的哆啦A梦
 
+## style
+
+> 所有 style基于 normalize.css 7.0
+
+
+## 组件
+
+
+### 基础组件
+
+- loading
+- nothing
+
+
+### 容器组件（Container Component）
+
+- page
+- popup
+
+
+### HOC
+
+
+
 ## Build Setup
 
 ``` bash

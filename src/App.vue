@@ -15,7 +15,7 @@
 </template>
 
 <script>
-  import pageComponent from '@/components/page'
+  import pageComponent from '@/containers/page'
   import Layout from './components/Layout'
   import Demo from './components/Demo'
   import PopupDemo from './components/PopupDemo'

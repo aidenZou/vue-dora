@@ -17,8 +17,8 @@
 </template>
 
 <script>
-  import loadingComponent from './loading'
-  import nothingComponent from './nothing'
+  import loadingComponent from '../components/loading'
+  import nothingComponent from '../components/nothing'
 
   export default {
     components: {

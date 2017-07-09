@@ -1,27 +1,32 @@
-const modalOpen = 'modal-open'
+const BODY_CLASS = 'modal-open'
+
+const toggleBodyClass = function (className = BODY_CLASS, show) {
+  if (show) {
+    document.body.classList.add(className)
+  } else {
+    setTimeout(() => {
+      document.body.classList.remove(className)
+    }, 300)
+  }
+}
 
 export default {
   props: {
+    show: {
+      type: Boolean,
+      default: false
+    },
     bodyClass: {
       type: String,
-      default: modalOpen
+      default: BODY_CLASS
     }
   },
   watch: {
-    show (value) {
-      this.toggleClass()
+    show (newValue) {
+      toggleBodyClass(this.bodyClass, newValue)
     }
   },
   created () {
-    this.toggleClass()
-  },
-  methods: {
-    toggleClass () {
-      if (this.show) {
-        document.body.classList.add(this.bodyClass)
-      } else {
-        document.body.classList.remove(this.bodyClass)
-      }
-    }
+    toggleBodyClass(this.bodyClass, this.show)
   }
 }

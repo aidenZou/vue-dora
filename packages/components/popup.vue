@@ -8,35 +8,19 @@
 </template>
 
 <script>
-  const BODY_CLASS = 'modal-open'
-  const bodyClass = function (show) {
-    if (show) {
-      document.body.classList.add(BODY_CLASS)
-    } else {
-      setTimeout(() => {
-        document.body.classList.remove(BODY_CLASS)
-      }, 300)
-    }
-  }
+  import bodyClass from '../mixins/bodyClass'
 
   export default {
+    mixins: [bodyClass],
     props: {
-      show: {
-        type: Boolean,
-        default: false
-      },
+      // show: {
+      //   type: Boolean,
+      //   default: false
+      // },
       height: {
         type: String,
         default: 'auto'
       }
-    },
-    watch: {
-      show (newValue) {
-        bodyClass(newValue)
-      }
-    },
-    created () {
-      bodyClass(this.show)
     },
     methods: {
       close () {

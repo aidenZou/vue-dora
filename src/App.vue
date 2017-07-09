@@ -1,6 +1,8 @@
 <template>
   <v-page class="div-class" :view="PAGE_VIEW">
     <v-demo></v-demo>
+    <button @click="togglePosition">toggle Position {{ popupPosition }}</button>
+
     <button @click="show=true">点击展示用 popup包装过的组件</button>
     <!--布局-->
     <v-layout></v-layout>
@@ -9,7 +11,7 @@
     <div slot="nothing">自定义无数据内容</div>
 
     <template slot="fixed">
-      <v-popupdemo :show.sync="show" :list="list"></v-popupdemo>
+      <v-popupdemo :show.sync="show" :position="popupPosition" :list="list"></v-popupdemo>
     </template>
   </v-page>
 </template>
@@ -32,8 +34,19 @@
       return {
         PAGE_VIEW: 'MAIN',      // MAIN、LOADING、NOTHING
         show: false,
+        popupPosition: 'bottom',
         list: [1, 2, 3, 4, 5]
       }
+    },
+    methods: {
+      togglePosition: (() => {
+        const positions = ['bottom', 'top', 'left', 'right']
+        let count = 1
+        return function () {
+          this.popupPosition = positions[count % 4]
+          count++
+        }
+      })()
     }
   }
 </script>

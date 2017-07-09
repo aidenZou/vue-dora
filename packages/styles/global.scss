@@ -1,19 +1,21 @@
 .mark {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    tap-highlight-color: transparent;
-    opacity: 0;
-    z-index: 100;
-    pointer-events: none;
-    transition: all .3s
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  tap-highlight-color: transparent;
+  opacity: 0;
+  z-index: 100;
+  z-index: -1;
+  pointer-events: none;
+  transition: opacity .3s
 }
 
 .mark.mark-show {
-    opacity: 1;
-    pointer-events: auto;
+  opacity: 1;
+  z-index: 101;
+  pointer-events: auto;
 }

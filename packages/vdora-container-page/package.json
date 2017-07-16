@@ -1,6 +1,6 @@
 {
   "name": "vdora-container-page",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,8 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "vdora-component-loading": "^0.0.4",
-    "vdora-component-nothing": "^0.0.4",
+    "vdora-component-loading": "^0.0.5",
+    "vdora-component-nothing": "^0.0.5",
     "vdora-style": "^0.0.4"
   }
 }

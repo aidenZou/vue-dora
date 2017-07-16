@@ -1,8 +1,8 @@
 {
   "name": "vdora-container-popup",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "vdora-mixin": "^0.0.2",
-    "vdora-style": "^0.0.2"
+    "vdora-mixin": "^0.0.4",
+    "vdora-style": "^0.0.4"
   }
 }

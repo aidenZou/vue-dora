@@ -1,8 +1,8 @@
 {
   "name": "vdora-component-nothing",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "vdora-style": "^0.0.2"
+    "vdora-style": "^0.0.4"
   }
 }

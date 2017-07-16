@@ -1,6 +1,6 @@
 {
   "name": "vdora-container-popup",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,6 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "vdora-mixin": "^0.0.5",
-    "vdora-style": "^0.0.4"
+    "vdora-style": "^0.0.6"
   }
 }

@@ -4,22 +4,27 @@
 
 ## style
 
+vdora-style
+
 > 所有 style基于 normalize.css 7.0
 
+## mixin
+
+vdora-mixin
 
 ## 组件
 
 
 ### 基础组件
 
-- loading
-- nothing
+- loading vdora-component-loading
+- nothing vdora-component-nothing
 
 
 ### 容器组件（Container Component）
 
-- page
-- popup
+- page vdora-container-page
+- popup vdora-container-popup
 
 
 ### HOC

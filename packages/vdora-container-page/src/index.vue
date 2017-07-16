@@ -41,7 +41,7 @@
 </script>
 
 <style lang="scss">
-  @import 'vdora-style';
+  @import '~vdora-style';
 
   #app {
     -webkit-font-smoothing: antialiased;

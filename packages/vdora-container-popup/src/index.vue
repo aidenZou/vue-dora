@@ -38,7 +38,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import 'vdora-style';
+  @import '~vdora-style';
 
   .popup-container {
     position: relative;

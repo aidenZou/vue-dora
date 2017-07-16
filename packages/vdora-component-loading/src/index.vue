@@ -9,7 +9,7 @@
 </template>
 
 <style lang="scss" scoped>
-  @import 'vdora-style';
+  @import '~vdora-style';
 
   figure {
     position: absolute;

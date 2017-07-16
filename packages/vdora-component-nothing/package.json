@@ -1,8 +1,8 @@
 {
-  "name": "vdora-style",
+  "name": "vdora-component-nothing",
   "version": "0.0.2",
   "description": "",
-  "main": "src/reset.scss",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "normalize.css": "^7.0.0"
+    "vdora-style": "^0.0.2"
   }
 }

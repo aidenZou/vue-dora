@@ -1,6 +1,12 @@
 .DS_Store
 node_modules/
+/node_modules
+/packages/*/node_modules
+/packages/*/yarn.lock
 dist/
+*.log
+*.cache
+/.eslintcache
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

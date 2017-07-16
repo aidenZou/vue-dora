@@ -5,6 +5,8 @@
 </template>
 
 <style lang="scss" scoped>
+  @import '~vdora-style';
+
   div {
     text-align: center;
   }

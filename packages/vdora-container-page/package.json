@@ -1,0 +1,17 @@
+{
+  "name": "vdora-container-page",
+  "version": "0.0.7",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vdora-component-loading": "^0.0.7",
+    "vdora-component-nothing": "^0.0.7",
+    "vdora-style": "^0.0.6"
+  }
+}

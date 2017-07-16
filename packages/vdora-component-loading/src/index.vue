@@ -9,6 +9,8 @@
 </template>
 
 <style lang="scss" scoped>
+  @import '~vdora-style';
+
   figure {
     position: absolute;
     margin: auto;

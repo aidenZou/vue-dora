@@ -10,7 +10,7 @@
 </template>
 
 <script>
-  import bodyClass from '../mixins/bodyClass'
+  import bodyClass from 'vdora-mixin/bodyClass'
 
   export default {
     mixins: [bodyClass],
@@ -38,6 +38,8 @@
 </script>
 
 <style lang="scss" scoped>
+  @import '~vdora-style';
+
   .popup-container {
     position: relative;
     z-index: 100;

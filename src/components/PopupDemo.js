@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import Popup from '@/containers/popup'
+import Popup from '@/vdora-container-popup'
 import Demo from './Demo'
 
 export default {

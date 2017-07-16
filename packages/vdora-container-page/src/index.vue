@@ -17,8 +17,8 @@
 </template>
 
 <script>
-  import loadingComponent from '../components/loading'
-  import nothingComponent from '../components/nothing'
+  import loadingComponent from 'vdora-component-loading'
+  import nothingComponent from 'vdora-component-nothing'
 
   export default {
     components: {
@@ -41,6 +41,8 @@
 </script>
 
 <style lang="scss">
+  @import '~vdora-style';
+
   #app {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

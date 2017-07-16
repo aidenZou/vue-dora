@@ -11,13 +11,13 @@
     <div slot="nothing">自定义无数据内容</div>
 
     <template slot="fixed">
-      <v-popupdemo :show.sync="show" :position="popupPosition" :list="list"></v-popupdemo>
+       <v-popupdemo :show.sync="show" :position="popupPosition" :list="list"></v-popupdemo>
     </template>
   </v-page>
 </template>
 
 <script>
-  import pageComponent from '@/containers/page'
+  import pageComponent from '@/vdora-container-page'
   import Layout from './components/Layout'
   import Demo from './components/Demo'
   import PopupDemo from './components/PopupDemo'
@@ -52,5 +52,5 @@
 </script>
 
 <style lang="scss">
-  @import '~@/styles/index';
+  @import '~@/vdora-style/src/index.scss';
 </style>

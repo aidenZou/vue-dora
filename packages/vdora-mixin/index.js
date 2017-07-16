@@ -1,1 +1,1 @@
-module.exports = require('./bodyClass')
+module.exports = require('./bodyClass.js')

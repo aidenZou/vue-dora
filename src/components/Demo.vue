@@ -3,7 +3,7 @@
     <h2>demo</h2>
 
     <div>
-      我是一个组件
+      <h3>{{ text }}</h3>
       <p>{{ list }}</p>
       <!--<button @click="clickHandler">点击</button>-->
     </div>
@@ -13,6 +13,10 @@
 <script>
   export default {
     props: {
+      text: {
+        type: String,
+        default: '我是 Demo组件'
+      },
       list: {
         type: Array,
         default: function () {

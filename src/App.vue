@@ -1,9 +1,13 @@
 <template>
   <v-page class="div-class" :view="PAGE_VIEW">
+    <h2>HOC</h2>
     <v-demo></v-demo>
+    <v-simpledemo :list="[1,2,3,4]"></v-simpledemo>
     <button @click="togglePosition">toggle Position {{ popupPosition }}</button>
-
     <button @click="show=true">点击展示用 popup包装过的组件</button>
+
+    <h2>Layout</h2>
+
     <!--布局-->
     <v-layout></v-layout>
 
@@ -21,6 +25,7 @@
   import Layout from './components/Layout'
   import Demo from './components/Demo'
   import PopupDemo from './components/PopupDemo'
+  import SimpleDemo from './components/SimpleDemo'
 
   export default {
     name: 'app',
@@ -28,6 +33,7 @@
       'v-page': pageComponent,
       'v-layout': Layout,
       'v-demo': Demo,
+      'v-simpledemo': SimpleDemo,
       'v-popupdemo': PopupDemo
     },
     data () {
@@ -53,4 +59,8 @@
 
 <style lang="scss">
   @import '~@/vdora-style/src/index.scss';
+
+  .box {
+    border: 1px solid #42b983;
+  }
 </style>

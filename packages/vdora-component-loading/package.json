@@ -1,6 +1,6 @@
 {
   "name": "vdora-component-loading",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "vdora-style": "^0.0.6"
+    "vdora-style": "^0.0.8"
   }
 }

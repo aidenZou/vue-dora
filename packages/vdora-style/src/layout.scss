@@ -59,15 +59,21 @@
   flex: 1;
 }
 
-// 垂直水平居中对齐
-.l-cc {
+// 垂直居中对齐
+.l-v_c {
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
-// 垂直居中对齐
-.l-c {
+// 水平居中对齐
+.l-h_c {
   display: flex;
+  justify-content: center;
+}
+
+// 垂直水平居中对齐
+.l-vh_c {
+  display: flex;
+  justify-content: center;
   align-items: center;
 }

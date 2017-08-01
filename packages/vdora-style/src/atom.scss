@@ -1,7 +1,12 @@
 //原子类
+@import "./mixin";
 
 .ellipsis {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+}
+
+.clearfix {
+  @include clearfix;
 }

@@ -90,13 +90,18 @@
     </div>
 
     <h3>垂直居中</h3>
-    <div class="l-c box h-200">
+    <div class="l-v_c box h-200">
       <div>垂直居中</div>
     </div>
 
-    <h3>水平垂直居中</h3>
-    <div class="l-cc box h-200">
-      <div>水平垂直居中</div>
+    <h3>水平居中</h3>
+    <div class="l-h_c box h-200">
+      <div>水平居中</div>
+    </div>
+
+    <h3>垂直水平居中</h3>
+    <div class="l-vh_c box h-200">
+      <div>垂直水平居中</div>
     </div>
 
     <p>

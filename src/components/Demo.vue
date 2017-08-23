@@ -5,7 +5,7 @@
     <div>
       <h3>{{ text }}</h3>
       <p>{{ list }}</p>
-      <!--<button @click="clickHandler">点击</button>-->
+      <button @click="clickHandler">点击</button>
     </div>
   </div>
 </template>
@@ -25,8 +25,9 @@
       }
     },
     methods: {
-      clickHandler () {
-        console.log('click...')
+      clickHandler (event) {
+        console.log('on-click for Demo...')
+        this.$emit('on-click', event)
       }
     }
   }

@@ -2,29 +2,35 @@
 
 > vue 的哆啦A梦
 
+[@v-dora](https://www.npmjs.com/org/v-dora)
+
+## 构建
+
+[vdora-cli](https://www.npmjs.com/package/vdora-cli)
+
 ## style
 
-vdora-style
+[vdora-style](https://www.npmjs.com/package/vdora-style)
 
 > 所有 style基于 normalize.css 7.0
 
 ## mixin
 
-vdora-mixin
+[vdora-mixin](https://www.npmjs.com/package/vdora-mixin)
 
 ## 组件
 
 
 ### 基础组件
 
-- loading vdora-component-loading
-- nothing vdora-component-nothing
+- loading [vdora-component-loading](https://www.npmjs.com/package/vdora-component-loading)
+- nothing [vdora-component-nothing](https://www.npmjs.com/package/vdora-component-nothing)
 
 
 ### 容器组件（Container Component）
 
-- page vdora-container-page
-- popup vdora-container-popup
+- page [vdora-container-page](https://www.npmjs.com/package/vdora-container-page)
+- popup [vdora-container-popup](https://www.npmjs.com/package/vdora-container-popup)
 
 
 ### HOC

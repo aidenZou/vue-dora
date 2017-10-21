@@ -55,7 +55,7 @@
     data () {
       return {
         name: 'app',
-        PAGE_VIEW: 'MAIN',      // MAIN、LOADING、NOTHING
+        PAGE_VIEW: 'MAIN', // MAIN、LOADING、NOTHING
         showDemoPopup: false,
         showLayoutPopup: false,
         popupPosition: 'bottom',

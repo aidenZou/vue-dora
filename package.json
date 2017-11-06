@@ -11,15 +11,15 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
-    "vue": "^2.3.3"
+    "vue": "^2.5.3"
   },
   "devDependencies": {
     "babel-helper-vue-jsx-merge-props": "^2.0.2",
     "babel-plugin-syntax-jsx": "^6.18.0",
     "babel-plugin-transform-vue-jsx": "^3.5.0",
-    "lerna": "^2.4.0",
-    "vdora-cli": "^0.1.4",
-    "vue-template-compiler": "^2.3.3"
+    "lerna": "^2.5.1",
+    "vdora-cli": "^0.1.7",
+    "vue-template-compiler": "^2.5.3"
   },
   "engines": {
     "node": ">= 4.0.0",

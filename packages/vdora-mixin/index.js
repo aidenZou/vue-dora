@@ -1,1 +1,4 @@
-module.exports = require('./bodyClass.js')
+import bodyClass from './src/bodyClass'
+import modalVisible from './src/modalVisible'
+
+export { bodyClass, modalVisible }

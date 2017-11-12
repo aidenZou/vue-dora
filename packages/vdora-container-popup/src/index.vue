@@ -10,7 +10,7 @@
 </template>
 
 <script>
-  import bodyClass from 'vdora-mixin/bodyClass'
+  import { bodyClass } from 'vdora-mixin'
 
   export default {
     mixins: [bodyClass],

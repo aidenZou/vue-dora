@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="page-container full-page">
+  <div class="page-container full-page">
     <v-loading v-if="view === 'LOADING'"></v-loading>
     <v-nothing v-if="view === 'NOTHING'">
       <slot name="nothing"></slot>

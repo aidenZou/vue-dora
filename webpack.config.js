@@ -5,6 +5,10 @@ function resolve (dir) {
 }
 
 module.exports = {
+  entry: {
+    main: './src/main.js'
+  //   // app: path.resolve(process.cwd(), './src/main.js')
+  },
   resolve: {
     alias: {
       '@': resolve('packages')

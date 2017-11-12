@@ -1,7 +1,5 @@
 <template>
-  <div class="container">
-    <h2>Layout demo</h2>
-
+  <v-demo-page class="page-layout" title="Layout" desc="布局">
     <h3>水平</h3>
     <div class="l-h box">
       <div class="block w_50 h_50">1</div>
@@ -107,54 +105,67 @@
     <p>
       布局相关 class 要写在 class 最前面
     </p>
-
-  </div>
+  </v-demo-page>
 </template>
 
-<style scoped lang="scss">
-  .container {
-    padding: 15px;
-  } // 42b983
-  h2 {
-    text-align: center;
-  }
+<script>
+  import VDemoPage from '../components/DemoPage'
 
-  h3 {
-    margin-top: 36px;
-    margin-bottom: 10px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #333;
+  export default {
+    name: 'layout-view',
+    components: {
+      VDemoPage
+    }
   }
+</script>
 
-  .h-200 {
-    height: 200px;
-  }
+<style lang="scss" scoped>
+  .page-layout {
+    .container {
+      padding: 15px;
+    }
+    h2 {
+      text-align: center;
+    }
 
-  .box {
-    // height: 100px;
-    padding: 10px;
-    border: 1px solid #369;
-  }
+    h3 {
+      margin-top: 36px;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #333;
+    }
 
-  .h_50 {
-    height: 50px;
-  }
+    .h-200 {
+      height: 200px;
+    }
 
-  .w_50 {
-    width: 50px;
-  }
+    .box {
+      // height: 100px;
+      padding: 10px;
+      border: 1px solid #42b983;
+      background: #f7f7f7;
+    }
 
-  .base-block {
-    border: 1px solid #42b983;
-    width: 50px;
-  }
+    .h_50 {
+      height: 50px;
+    }
 
-  .block {
-    width: 50px;
-    height: 50px;
-    // height: 100%;
-    line-height: 50px;
-    text-align: center;
-    border: 1px solid #42b983;
+    .w_50 {
+      width: 50px;
+    }
+
+    .base-block {
+      border: 1px solid #42b983;
+      width: 50px;
+    }
+
+    .block {
+      width: 50px;
+      height: 50px;
+      // height: 100%;
+      line-height: 50px;
+      text-align: center;
+      border: 1px solid #42b983;
+    }
   }
 </style>

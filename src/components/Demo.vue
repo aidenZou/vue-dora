@@ -5,13 +5,18 @@
     <div>
       <h3>{{ text }}</h3>
       <p>{{ list }}</p>
-      <button @click="clickHandler">点击</button>
+      <v-button type="warn" mini @click.native="clickHandler">点击</v-button>
     </div>
   </div>
 </template>
 
 <script>
+  import vButton from '@/vdora-component-button'
+
   export default {
+    components: {
+      vButton
+    },
     props: {
       text: {
         type: String,

@@ -8,9 +8,11 @@
     "dev": "vdora-dev",
     "start": "npm run dev",
     "build": "vdora-build",
+    "bootstrap": "yarn && lerna bootstrap",
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
+    "bulma": "^0.6.1",
     "vue": "^2.5.3"
   },
   "devDependencies": {
@@ -18,7 +20,7 @@
     "babel-plugin-syntax-jsx": "^6.18.0",
     "babel-plugin-transform-vue-jsx": "^3.5.0",
     "lerna": "^2.5.1",
-    "vdora-cli": "^0.1.7",
+    "vdora-cli": "^0.1.8",
     "vue-template-compiler": "^2.5.3"
   },
   "engines": {

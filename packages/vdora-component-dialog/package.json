@@ -1,0 +1,21 @@
+{
+  "name": "vdora-component-dialog",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vdora-container-popup": "^0.0.8",
+    "vdora-mixin": "^0.0.7",
+    "vdora-style": "^0.0.8",
+    "vdora-helper": "^0.0.1"
+  },
+  "peerDependencies": {
+    "vue": "^2.0.0"
+  }
+}

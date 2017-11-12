@@ -1,0 +1,16 @@
+@import "../../base/fn";
+
+.#{$weui_ns}btn_loading {
+	.#{$weui_ns}loading {
+		margin:-.2em .34em 0 0;
+	}
+  &.#{$weui_ns}btn_primary, &.#{$weui_ns}btn_warn {
+    color: $weuiBtnActiveFontColor;
+  }
+	&.#{$weui_ns}btn_primary{
+    background-color: $weuiBtnPrimaryActiveBg;
+	}
+	&.#{$weui_ns}btn_warn{
+    background-color: $weuiBtnWarnActiveBg;
+	}
+}

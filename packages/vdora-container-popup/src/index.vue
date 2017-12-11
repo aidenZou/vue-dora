@@ -1,8 +1,8 @@
 <template>
   <div class="popup-container">
-    <div :class="{'mark': true, 'mark-show': show}" @click.stop.prevent="close"></div>
+    <div :class="{'mark': true, 'mark-show': isVisible}" @click.stop.prevent="hide"></div>
     <transition :name="`popup-animate-${position}`">
-      <div v-show="show" class="popup-dialog" :class="[`popup-${position}`]" :style="{height:height}">
+      <div v-show="isVisible" class="popup-dialog" :class="[`popup-${position}`]" :style="{height:height}">
         <slot></slot>
       </div>
     </transition>
@@ -10,15 +10,11 @@
 </template>
 
 <script>
-  import { bodyClass } from 'vdora-mixin'
+  import { bodyClass, modalVisibleFun } from 'vdora-mixin'
 
   export default {
-    mixins: [bodyClass],
+    mixins: [bodyClass, modalVisibleFun({ emitShow: 'open', emitHide: 'close' })],
     props: {
-      // show: {
-      //   type: Boolean,
-      //   default: false
-      // },
       height: {
         type: String,
         default: 'auto'
@@ -27,11 +23,6 @@
       position: {
         type: String,
         default: 'bottom'
-      }
-    },
-    methods: {
-      close () {
-        this.$emit('update:show', false)
       }
     }
   }

@@ -1,7 +1,7 @@
 const BODY_CLASS = 'modal-open'
 
-const toggleBodyClass = function (className = BODY_CLASS, show) {
-  if (show) {
+const toggleBodyClass = function (className = BODY_CLASS, visible) {
+  if (visible) {
     document.body.classList.add(className)
   } else {
     setTimeout(() => {
@@ -12,8 +12,9 @@ const toggleBodyClass = function (className = BODY_CLASS, show) {
 
 export default {
   props: {
-    show: {
+    visible: {
       type: Boolean,
+      // required: true,
       default: false
     },
     bodyClass: {
@@ -22,11 +23,11 @@ export default {
     }
   },
   watch: {
-    show (newValue) {
+    visible (newValue) {
       toggleBodyClass(this.bodyClass, newValue)
     }
   },
   created () {
-    toggleBodyClass(this.bodyClass, this.show)
+    toggleBodyClass(this.bodyClass, this.visible)
   }
 }

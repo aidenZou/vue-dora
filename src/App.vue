@@ -4,9 +4,9 @@
 
     <v-view-toast></v-view-toast>
 
-    <v-view-button></v-view-button>
-
     <v-view-hoc></v-view-hoc>
+
+    <v-view-button></v-view-button>
 
     <v-view-layout></v-view-layout>
 

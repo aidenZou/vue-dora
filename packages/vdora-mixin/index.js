@@ -1,4 +1,10 @@
 import bodyClass from './src/bodyClass'
-import modalVisible from './src/modalVisible'
+import modalVisibleFun from './src/modalVisibleFun'
 
-export { bodyClass, modalVisible }
+const modalVisible = modalVisibleFun()
+
+export {
+  bodyClass,
+  modalVisibleFun,
+  modalVisible
+}

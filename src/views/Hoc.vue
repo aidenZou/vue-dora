@@ -1,25 +1,31 @@
 <template>
-  <!-- <v-page-component :view="PAGE_VIEW"> -->
   <v-demo-page title="Hoc" desc="高阶事例">
-    <v-demo @on-click="handlerClick"></v-demo>
-    <v-demo-box :list="[1,2,3,4]" @on-click="handlerClick"></v-demo-box>
+    <h3>demo：</h3>
+    <v-demo @click="handlerClick"></v-demo>
+    <h3>demo + box：</h3>
+    <v-demo-box :names="['hocView']" :list="[1,2,3,4]" @click="handlerClick"></v-demo-box>
 
-    <v-button type="primary" mini @click.native="togglePosition">toggle Position {{ popupPosition }}</v-button>
+    <div>
+      <h3>设置：</h3>
+      <v-button type="primary" mini @click.native="togglePosition">toggle Position {{ popupPosition }}</v-button>
+    </div>
+
+    <v-button type="warn" mini @click.native="handlerShow">show DemoBoxPopup</v-button>
+    <v-button type="warn" mini @click.native="handlerShowLayoutPopup">show LayoutPopup</v-button>
+
+    <!--
     <v-button type="warn" mini @click.native="showDemoPopup=true">点击展示用 popup包装过的 Dome组件</v-button>
     <v-button type="warn" mini @click.native="showLayoutPopup=true">点击展示用 popup包装过的 Layout组件</v-button>
 
-    <v-layout-popup :show.sync="showLayoutPopup" :height="'80%'" :position="popupPosition"></v-layout-popup>
-    <v-demo-popup :show.sync="showDemoPopup" :position="popupPosition" :list="list" @on-click="handlerClick"></v-demo-popup>
+    <v-layout-popup :visible.sync="showLayoutPopup" :height="'80%'" :position="popupPosition"></v-layout-popup>
+    <v-demo-box-popup :visible.sync="showDemoPopup" :position="popupPosition" :names="['hocView']" :list="[1,2,3,4,5]" @click="handlerClick"></v-demo-box-popup>
+    -->
   </v-demo-page>
-    <!-- <template slot="fixed">
-       <v-layout-popup :show.sync="showLayoutPopup" :height="'80%'" :position="popupPosition"></v-layout-popup>
-       <v-demo-popup :show.sync="showDemoPopup" :position="popupPosition" :list="list" @on-click="handlerClick"></v-demo-popup>
-    </template> -->
-  <!-- </v-page-component> -->
 </template>
 
 <script>
-  import VPage from '@/vdora-container-page'
+  import Vue from 'vue'
+  import { createAPI } from '@/vdora-helper'
   import VButton from '@/vdora-component-button'
 
   import VDemo from '../components/Demo'
@@ -29,33 +35,36 @@
 
   import VDemoPage from '../components/DemoPage'
 
-  let DemoBox = BoxContainer(VDemo)
+  const VDemoBox = BoxContainer(VDemo)
 
-  let DemoPopup = PopupContainer(VDemo)
-  let LayoutPopup = PopupContainer(VLayoutDemo)
-  let DemoBoxPopup = PopupContainer(DemoBox)
+  const VDemoPopup = PopupContainer(VDemo)
+  const VLayoutPopup = PopupContainer(VLayoutDemo)
+  const VDemoBoxPopup = PopupContainer(VDemoBox)
+
+  VLayoutPopup.name = 'layout-popup'
+  createAPI(Vue, VLayoutPopup, ['click'], true)
+
+  VDemoBoxPopup.name = 'demo-box-popup'
+  createAPI(Vue, VDemoBoxPopup, ['click'], true)
 
   export default {
     name: 'hoc-view',
     components: {
-      VPage,
       VButton,
       VDemoPage,
       VDemo,
       VLayoutDemo,
-      'v-demo-box': DemoBox,
-      'v-demo-popup': DemoPopup,
-      'v-layout-popup': LayoutPopup,
-      'v-demo-box-popup': DemoBoxPopup
+      VDemoBox,
+      VDemoPopup,
+      VLayoutPopup,
+      VDemoBoxPopup
     },
     data () {
       return {
-        name: 'app',
-        PAGE_VIEW: 'MAIN', // MAIN、LOADING、NOTHING
+        name: 'hoc-view',
         showDemoPopup: false,
         showLayoutPopup: false,
-        popupPosition: 'bottom',
-        list: [1, 2, 3, 4, 5]
+        popupPosition: 'bottom'
       }
     },
     methods: {
@@ -68,8 +77,31 @@
         }
       })(),
       handlerClick (event) {
-        console.log(`on-click for ${this.name}`, event)
+        console.log(`click for hocView`, event)
         this.showDemoPopup = false
+      },
+      handlerShowLayoutPopup () {
+        this.$createLayoutPopup({
+          position: this.popupPosition,
+          height: '80%'
+        }).show()
+      },
+      handlerShow () {
+        let self = this
+        const component = this.$createDemoBoxPopup({
+          // visible: this.showDemoPopup,
+          position: this.popupPosition,
+          names: ['hocView'],
+          text: 'hocView',
+          list: [1, 2, 3, 4, 5],
+          confirmBtn: '主操作',
+          cancelBtn: '辅助操作',
+          onClick (e) {
+            console.log(`click for hocView`, event, self)
+            component.hide()
+          }
+        }).show()
+        console.log(component)
       }
     }
   }

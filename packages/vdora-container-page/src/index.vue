@@ -67,8 +67,9 @@
     overflow-y: auto;
     position: relative;
     -webkit-overflow-scrolling: touch;
-    >* {
-      transform: translateZ(0);
+    > * {
+      // transform: translateZ(0);
+      z-index: 1;
     }
   }
 

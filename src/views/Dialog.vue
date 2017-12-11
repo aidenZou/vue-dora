@@ -1,5 +1,6 @@
 <template>
   <v-demo-page title="Dialog" desc="对话框">
+    <h3>动画切换：</h3>
     <div v-for="(name, index) in transitionNames" :key="index">
       <input type="radio" :id="name" :value="name" v-model="transitionName">
       <label :for="name">{{ name }}</label>
